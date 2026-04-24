@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owner's Desk | At The In Gate</title>
+    <meta name="description" content="Owner desk for At The In Gate moderation, listings, show feed imports, members, reviews, kids safety, and site settings.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="page-shell horse-page">
+    <div id="siteHeader"></div>
+
+    <main>
+      <section class="page-hero admin-hero">
+        <div>
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Owner's Desk</span>
+          </nav>
+          <p class="kicker">Owner's Desk</p>
+          <h1>Sam's rail-side command center.</h1>
+          <p>Review rail posts, approve pony listings, stage show imports, watch memberships, handle reviews carefully, and keep the whole place warm without letting it get messy.</p>
+        </div>
+        <div class="admin-metrics" aria-label="Admin metrics">
+          <div class="admin-metric">
+            <strong>12</strong>
+            <span>Rail notes waiting for review</span>
+          </div>
+          <div class="admin-metric">
+            <strong>9</strong>
+            <span>New trial members</span>
+          </div>
+          <div class="admin-metric">
+            <strong>3</strong>
+            <span>Show dates to approve</span>
+          </div>
+          <div class="admin-metric">
+            <strong>4</strong>
+            <span>Reviews needing care</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-page">
+        <div class="admin-layout">
+          <nav class="admin-tabs" aria-label="Admin sections">
+            <button class="is-active" type="button" data-admin-tab="editor">Site Editor</button>
+            <button type="button" data-admin-tab="moderation">Review Rail</button>
+            <button type="button" data-admin-tab="listings">Listing Barn</button>
+            <button type="button" data-admin-tab="shows">Show Feed</button>
+            <button type="button" data-admin-tab="members">Members</button>
+            <button type="button" data-admin-tab="reviews">Reputation Desk</button>
+            <button type="button" data-admin-tab="settings">House Rules</button>
+            <a href="dashboard.html">Member Dashboard</a>
+          </nav>
+
+          <div>
+            <p class="status-line" id="adminStatus">Prototype mode: edit homepage words and pictures here, then refresh the public site to see them.</p>
+
+            <section class="admin-section is-active" data-admin-section="editor" aria-labelledby="site-editor-title">
+              <div class="section-heading">
+                <p class="kicker">Site Editor</p>
+                <h2 id="site-editor-title">Change the homepage without touching code.</h2>
+                <p>Update the big words, card text, and pictures yourself. This prototype saves in this browser, so it is perfect for shaping the site before we wire the live version to a real CMS.</p>
+                <div class="page-actions">
+                  <a href="react-editor/index.html">Open React Visual Editor</a>
+                  <a href="index.html">View Public Homepage</a>
+                </div>
+              </div>
+
+              <article class="admin-card owner-editor-card">
+                <span>Homepage editor</span>
+                <h3>Words and pictures people see first</h3>
+                <p id="siteEditorStatus">Choose a field, paste an asset path or upload a small image, then save. Use pictures that match the card label.</p>
+                <form id="siteEditorForm" class="site-editor-form">
+                  <div id="siteEditorFields" class="site-editor-stack"></div>
+                  <div class="editor-actions">
+                    <button class="primary-button" type="submit">Save site edits</button>
+                    <button class="mini-button" type="button" id="siteEditorExport">Export content</button>
+                    <button class="mini-button" type="button" id="siteEditorImport">Import content</button>
+                    <button class="mini-button danger" type="button" id="siteEditorReset">Reset homepage</button>
+                    <a class="mini-button" href="index.html">Open homepage</a>
+                  </div>
+                  <label class="editor-json-field">
+                    <span>Content export / import</span>
+                    <textarea id="siteEditorJson" rows="8" placeholder="Exported content will appear here. You can paste a saved version here and import it later."></textarea>
+                  </label>
+                </form>
+              </article>
+
+              <article class="admin-card">
+                <span>Picture shelf</span>
+                <h3>Approved images already in the site</h3>
+                <p>Click a picture path to copy it, then paste that path into the image field you want. The label under the picture matters, so keep sale cards, lease cards, shipping cards, and kids cards matched to the right kind of image.</p>
+                <div class="asset-chip-grid" id="approvedImageShelf"></div>
+              </article>
+            </section>
+
+            <section class="admin-section" data-admin-section="moderation" aria-labelledby="moderation-title">
+              <div class="section-heading">
+                <p class="kicker">Review Rail</p>
+                <h2 id="moderation-title">Anything sensitive stops here first.</h2>
+                <p>Trainer talk, reviews, minor-related posts, flagged gossip, and anything with a sharp edge goes through a human before it hits the rail.</p>
+              </div>
+              <div class="admin-table" id="moderationRows"></div>
+            </section>
+
+            <section class="admin-section" data-admin-section="listings" aria-labelledby="listings-title">
+              <div class="section-heading">
+                <p class="kicker">Listing Barn</p>
+                <h2 id="listings-title">Approve useful listings, not mysteries.</h2>
+                <p>Every pony, catch ride, service, shipping route, wanted ad, and tack swap should have enough detail to save people a phone call.</p>
+              </div>
+              <div class="admin-table" id="listingsRows"></div>
+              <div class="admin-grid">
+                <article class="admin-card">
+                  <span>Listing checklist</span>
+                  <h3>Before approval</h3>
+                  <ul>
+                    <li>Location, price or terms, division, height, video status.</li>
+                    <li>Seller, trainer, or parent contact path.</li>
+                    <li>Clear suitability notes and honest quirks.</li>
+                    <li>USEF name or record note when relevant.</li>
+                  </ul>
+                </article>
+                <article class="admin-card">
+                  <span>Featured spots</span>
+                  <h3>Paid upgrades later</h3>
+                  <p>Feature a pony, trainer, shipper, show, or service without letting paid listings bury the trustworthy ones.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-section" data-admin-section="shows" aria-labelledby="shows-admin-title">
+              <div class="section-heading">
+                <p class="kicker">Show Feed</p>
+                <h2 id="shows-admin-title">Feeds bring dates in. You decide what goes live.</h2>
+                <p>RSS can stage shows automatically, but the admin queue keeps duplicates, weird titles, and irrelevant events out of the public calendar.</p>
+              </div>
+              <div class="admin-table" id="showsRows"></div>
+              <article class="admin-card">
+                <span>RSS feed setup</span>
+                <h3>Add an upcoming show source.</h3>
+                <form data-prototype-form="#adminStatus" data-success="RSS feed staged. In the real build this would run daily and add new shows to the review queue.">
+                  <label>
+                    <span>Feed name</span>
+                    <input type="text" placeholder="Example: Zone 3 show calendar">
+                  </label>
+                  <label>
+                    <span>RSS URL</span>
+                    <input type="url" placeholder="https://example.com/rss">
+                  </label>
+                  <label>
+                    <span>Region or tag</span>
+                    <input type="text" placeholder="Example: Virginia, Pony Finals, Local">
+                  </label>
+                  <button class="primary-button" type="submit">Save feed</button>
+                </form>
+              </article>
+            </section>
+
+            <section class="admin-section" data-admin-section="members" aria-labelledby="members-title">
+              <div class="section-heading">
+                <p class="kicker">Members</p>
+                <h2 id="members-title">Trial, Plus, seller, trainer, junior, parent.</h2>
+                <p>Keep access simple: guests can peek, trials can actually use the site, Plus members stay in the loop, and admins can protect kid spaces.</p>
+              </div>
+              <div class="admin-table" id="membersRows"></div>
+              <div class="admin-grid">
+                <article class="admin-card">
+                  <span>Trial rule</span>
+                  <h3>Seven days free</h3>
+                  <p>Enough access to understand the value: contact, save, post once, reply, and set show alerts. Upgrade prompt appears near the end of the trial.</p>
+                </article>
+                <article class="admin-card">
+                  <span>Roles</span>
+                  <h3>Protect the rooms</h3>
+                  <ul>
+                    <li>Owner/admin: full access.</li>
+                    <li>Moderator: approve, hold, edit notes.</li>
+                    <li>Junior: limited posting and extra safety.</li>
+                    <li>Seller/service: listing tools and contact history.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-section" data-admin-section="reviews" aria-labelledby="reviews-admin-title">
+              <div class="section-heading">
+                <p class="kicker">Reputation Desk</p>
+                <h2 id="reviews-admin-title">Keep reputation useful and legally boring.</h2>
+                <p>Verified interaction reviews should focus on dates, role, responsiveness, care, communication, and outcome. No anonymous mud wrestling.</p>
+              </div>
+              <div class="admin-grid">
+                <article class="admin-card">
+                  <span>Pending review</span>
+                  <h3>Shipper experience: Wellington to Devon</h3>
+                  <p>Has date, route, photos at layover, and invoice. Needs public/private contact check before publishing.</p>
+                  <div class="admin-actions">
+                    <button class="mini-button primary" type="button" data-admin-action="approved">Approve</button>
+                    <button class="mini-button danger" type="button" data-admin-action="held">Hold</button>
+                  </div>
+                </article>
+                <article class="admin-card">
+                  <span>Needs rewrite</span>
+                  <h3>Trainer interaction note</h3>
+                  <p>Useful issue buried under emotional language. Ask member to rewrite as timeline, facts, and outcome.</p>
+                  <div class="admin-actions">
+                    <button class="mini-button" type="button" data-admin-action="edited">Request edit</button>
+                    <button class="mini-button danger" type="button" data-admin-action="held">Hold</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-section" data-admin-section="settings" aria-labelledby="settings-title">
+              <div class="section-heading">
+                <p class="kicker">House Rules</p>
+                <h2 id="settings-title">The switches that keep it simple and safe.</h2>
+              </div>
+              <div class="admin-grid">
+                <article class="admin-card">
+                  <span>Paywall</span>
+                  <h3>Access levels</h3>
+                  <form data-prototype-form="#adminStatus" data-success="Paywall settings saved in prototype mode.">
+                    <label>
+                      <span>Trial length</span>
+                      <select>
+                        <option>7 days</option>
+                        <option>14 days</option>
+                        <option>No trial</option>
+                      </select>
+                    </label>
+                    <label>
+                      <span>Plus price</span>
+                      <input type="text" value="$9 / month">
+                    </label>
+                    <button class="primary-button" type="submit">Save paywall</button>
+                  </form>
+                </article>
+                <article class="admin-card">
+                  <span>Pony People</span>
+                  <h3>Moderation defaults</h3>
+                  <ul>
+                    <li>Junior posts: review first.</li>
+                    <li>Reviews: verified only.</li>
+                    <li>Gossip: no minors, no accusations stated as fact.</li>
+                    <li>New sellers: first listing reviewed.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="siteFooter"></div>
+    <script src="pages.js"></script>
+    <script src="site-shell.js"></script>
+    <script src="site-content.js"></script>
+    <script src="admin-editor.js"></script>
+  </body>
+</html>
