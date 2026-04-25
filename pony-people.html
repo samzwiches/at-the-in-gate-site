@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pony People | At The In Gate</title>
+    <meta name="description" content="Ask the Rail, Parent Rail, Junior Riders, Trainer Talk, Show Reports, Tack Room Swap, and Who Knows This Pony.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="horse-page">
+    <div id="siteHeader"></div>
+    <main>
+      <section class="page-cover">
+        <div>
+          <p class="kicker">Pony People</p>
+          <h1>The group text, but findable.</h1>
+          <p>Ask the Rail, Parent Rail, Junior Riders, Trainer Talk, Show Reports, Tack Room Swap, and Who Knows This Pony. Warm, useful, moderated.</p>
+          <div class="hero-actions">
+            <a href="#ask-the-rail">Ask the Rail</a>
+            <a href="#who-knows-this-pony">Who Knows This Pony</a>
+            <a href="#tack-room-swap">Tack Room Swap</a>
+            <a href="login.html">Post to the Rail</a>
+          </div>
+        </div>
+        <img src="assets/atig-pony-show-lineup.jpg" alt="Pony riders lined up at a show">
+      </section>
+
+      <section class="horse-section white">
+        <div class="rail-room-grid">
+          <a class="rail-room" id="ask-the-rail" href="login.html"><span>Ask the Rail</span><h3>Need the hive mind?</h3><p>Pony fit, show logistics, listing questions, points confusion, and practical answers.</p></a>
+          <a class="rail-room" id="parent-rail" href="login.html"><span>Parent Rail</span><h3>For the adults at the ring</h3><p>Budgets, nerves, packing lists, first rated shows, and what nobody explained.</p></a>
+          <a class="rail-room" id="junior-riders" href="kids.html"><span>Junior Riders</span><h3>Kid-safe rider space</h3><p>Goals, brave moments, questions, and moderated rider talk.</p></a>
+          <a class="rail-room" id="trainer-talk" href="login.html"><span>Trainer Talk</span><h3>Professional and factual</h3><p>Lease terms, sale videos, trial prep, listing standards, and barn systems.</p></a>
+          <a class="rail-room" id="show-reports" href="login.html"><span>Show Reports</span><h3>What actually happened</h3><p>Footing, timing, parking, stabling, ring flow, and where to get coffee.</p></a>
+          <a class="rail-room" id="tack-room-swap" href="login.html"><span>Tack Room Swap</span><h3>The trunk cleanout corner</h3><p>Tiny boots, bows, pads, girths, trunks, and things kids outgrow overnight.</p></a>
+          <a class="rail-room" id="who-knows-this-pony" href="login.html"><span>Who Knows This Pony</span><h3>History lives here</h3><p>Old names, homes, videos, Pony Finals years, and memories from three barns ago.</p></a>
+          <a class="rail-room" href="rules.html"><span>Rules</span><h3>Keep it useful</h3><p>Facts, kindness, moderation, and no radioactive tea.</p></a>
+          <a class="rail-room" href="membership.html"><span>Membership</span><h3>Read first, post with a pass</h3><p>Guest browsing, Barn Pass trial, and Plus access.</p></a>
+        </div>
+      </section>
+
+      <section class="horse-section tint">
+        <div class="two-column">
+          <div class="section-lede">
+            <p class="kicker">How posting works</p>
+            <h2>Pony people do not need a maze.</h2>
+            <p>Pick the room, write the useful details, add photos if needed, and send. Sensitive posts and kid posts are reviewed before they go live.</p>
+          </div>
+          <form class="simple-form" action="login.html">
+            <label><span>What do you need?</span><select><option>Ask the Rail</option><option>Who Knows This Pony</option><option>Tack Room Swap</option><option>Show Reports</option><option>Parent Rail</option></select></label>
+            <label><span>Thread title</span><input type="text" placeholder="Example: Who remembers this medium pony?"></label>
+            <label><span>The useful details</span><textarea placeholder="Names, location, date, show, division, photo notes, or what decision you are trying to make."></textarea></label>
+            <button class="primary-button" type="submit">Log in to post</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="siteFooter"></div>
+    <script src="site-shell.js"></script>
+    <script src="editor-sync.js"></script>
+  </body>
+</html>

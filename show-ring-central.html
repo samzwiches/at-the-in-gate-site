@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Show Ring Central | At The In Gate</title>
+    <meta name="description" content="Show calendar, zone schedules, meetups, Pony Finals watch, USEF quick links, and rankings explained.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="horse-page">
+    <div id="siteHeader"></div>
+    <main>
+      <section class="page-cover">
+        <div>
+          <p class="kicker">Show Ring Central</p>
+          <h1>The links people ask for every Monday morning.</h1>
+          <p>Show calendar, zone schedules, meetups, Pony Finals watch, USEF quick links, and rankings explained for normal humans.</p>
+          <div class="hero-actions">
+            <a href="#calendar">Show Calendar</a>
+            <a href="#zones">Zone Schedules</a>
+            <a href="#usef">USEF Quick Links</a>
+            <a href="pony-people.html#show-reports">Show Reports</a>
+          </div>
+        </div>
+        <img src="assets/atig-showgrounds-deeprun.jpeg" alt="Show grounds with rings, jumps, and open footing">
+      </section>
+
+      <nav class="subnav-ribbon" aria-label="Show Ring Central sections">
+        <a href="#calendar">Calendar</a>
+        <a href="#zones">Zone Schedules</a>
+        <a href="#meetups">Meetups</a>
+        <a href="#pony-finals">Pony Finals Watch</a>
+        <a href="#usef">USEF Quick Links</a>
+        <a href="#rankings">Rankings Explained</a>
+      </nav>
+
+      <section class="horse-section white" id="calendar">
+        <div class="results-toolbar">
+          <div>
+            <p class="kicker">Show Calendar</p>
+            <h2><span id="showFeedCount">0 shows</span> from the show feed</h2>
+            <p>Each show below is its own item in <a href="feed.xml">feed.xml</a>. Update <code>data/shows.json</code>, run the builder, and the calendar updates.</p>
+          </div>
+          <label class="sort-control">
+            <span>USHJA Zone</span>
+            <select id="zoneShowFilter">
+              <option value="all">All zones</option>
+              <option value="1">Zone 1</option>
+              <option value="2">Zone 2</option>
+              <option value="3">Zone 3</option>
+              <option value="4">Zone 4</option>
+              <option value="5">Zone 5</option>
+              <option value="6">Zone 6</option>
+              <option value="7">Zone 7</option>
+              <option value="8">Zone 8</option>
+              <option value="9">Zone 9</option>
+              <option value="10">Zone 10</option>
+              <option value="11">Zone 11</option>
+              <option value="12">Zone 12</option>
+            </select>
+          </label>
+        </div>
+        <div class="notice-grid" id="showFeedGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="horse-section tint" id="zones">
+        <div class="section-lede">
+          <p class="kicker">Zone Schedules</p>
+          <h2>One place for the zone dates.</h2>
+          <p>Zone information belongs where pony parents and trainers can actually find it, not buried six tabs deep five minutes before entries close.</p>
+        </div>
+        <div class="image-card-grid">
+          <a class="image-card" href="feed.xml"><div class="program-preview" aria-hidden="true"><span>RSS</span><strong>Show Feed</strong><p>Each date as its own item.</p></div><div><strong>RSS Feed</strong><p>Every show as its own feed item for the site.</p></div></a>
+          <a class="image-card" href="admin.html"><div class="program-preview" aria-hidden="true"><span>Owner</span><strong>Review Desk</strong><p>Stage, check, publish.</p></div><div><strong>Admin Review</strong><p>Stage imported dates before they go live.</p></div></a>
+          <a class="image-card" href="pony-people.html#show-reports"><img src="assets/atig-show-barn-aisle.jpg" alt="Quiet show barn aisle"><div><strong>Show Reports</strong><p>Footing, timing, stabling, coffee, and ring flow.</p></div></a>
+        </div>
+      </section>
+
+      <section class="horse-section white" id="meetups">
+        <div class="section-lede">
+          <p class="kicker">Meetups</p>
+          <h2>Coffee, braiding swaps, and where to stand.</h2>
+          <p>Meetups should feel like a show-day bulletin board: practical, friendly, and easy to skim on a phone.</p>
+        </div>
+        <div class="rail-room-grid">
+          <a class="rail-room" href="pony-people.html#parent-rail"><span>Parent Rail</span><h3>Devon prep coffee</h3><p>Meet near the pony ring before schooling gets loud.</p></a>
+          <a class="rail-room" href="pony-people.html#tack-room-swap"><span>Tack Room Swap</span><h3>Braiding supply swap</h3><p>Thread, yarn, bows, bands, and emergency bobby pins.</p></a>
+          <a class="rail-room" href="catch-rides-shipping.html#shipping"><span>Shipping</span><h3>Who is hauling where?</h3><p>Share routes before everyone starts texting everyone.</p></a>
+        </div>
+      </section>
+
+      <section class="horse-section tint" id="pony-finals">
+        <div class="section-lede">
+          <p class="kicker">Pony Finals Watch</p>
+          <h2>Names to watch, reminders to save, panic to reduce.</h2>
+          <p>Qualifying dates, video nights, pony names people are whispering, and practical reminders for the adults doing the paperwork.</p>
+        </div>
+        <div class="image-card-grid">
+          <a class="image-card" href="the-ring-rail.html#up-and-comers"><img src="assets/atig-bay-pony-jump.jpg" alt="Pony jumping in a hunter ring"><div><strong>Up & Comers</strong><p>Green ponies, tiny pilots, and pairs to watch.</p></div></a>
+          <a class="image-card" href="pony-people.html#ask-the-rail"><img src="assets/atig-pony-show-lineup.jpg" alt="Pony riders lined up near the ring"><div><strong>Ask the Rail</strong><p>What counts, what matters, and what to stop spiraling about.</p></div></a>
+          <a class="image-card" href="kids.html#ribbon-board"><img src="assets/atig-pony-finals-dukes.jpg" alt="Pony Finals riders and ponies at the show grounds"><div><strong>Ribbon Board</strong><p>Celebrate the brave moments, not just the tricolors.</p></div></a>
+        </div>
+      </section>
+
+      <section class="horse-section white" id="usef">
+        <div class="section-lede">
+          <p class="kicker">USEF Quick Links</p>
+          <h2>Records, results, rankings, and the pages people lose.</h2>
+          <p>These links leave At The In Gate and go to official tools.</p>
+        </div>
+        <div class="link-grid">
+          <a href="https://www.usef.org/search" target="_blank" rel="noreferrer"><span>USEF</span><strong>Search records, people, competitions, farms, officials</strong></a>
+          <a href="https://www.usef.org/faqs/questions-regarding-points--results" target="_blank" rel="noreferrer"><span>USEF</span><strong>Points and results FAQ</strong></a>
+          <a href="https://www.usef.org/faqs/horse-recordingid" target="_blank" rel="noreferrer"><span>USEF</span><strong>Recording and report guidance</strong></a>
+          <a href="https://www.ushja.org/zones-affiliates" target="_blank" rel="noreferrer"><span>USHJA</span><strong>Zone overview and zone resources</strong></a>
+        </div>
+      </section>
+
+      <section class="horse-section tint" id="rankings">
+        <div class="section-lede">
+          <p class="kicker">Rankings Explained for Normal Humans</p>
+          <h2>Prize-list brain, plain-English translation.</h2>
+          <p>What counts, where to look, when points update, and why your trainer says to check one more thing before you celebrate.</p>
+        </div>
+        <div class="rail-room-grid">
+          <a class="rail-room" href="pony-people.html#ask-the-rail"><span>Ask the Rail</span><h3>Point question?</h3><p>Ask with zone, division, pony name, and date.</p></a>
+          <a class="rail-room" href="the-ring-rail.html#parent-corner"><span>Parent Corner</span><h3>What does this mean?</h3><p>For adults trying to understand the ranking page without crying.</p></a>
+          <a class="rail-room" href="rules.html"><span>Moderation</span><h3>Keep it factual</h3><p>Points questions need dates, divisions, and source links.</p></a>
+        </div>
+      </section>
+    </main>
+    <div id="siteFooter"></div>
+    <script src="site-shell.js"></script>
+    <script src="editor-sync.js"></script>
+    <script src="shows-data.js"></script>
+    <script src="shows.js"></script>
+  </body>
+</html>
