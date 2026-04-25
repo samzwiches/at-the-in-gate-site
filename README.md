@@ -70,3 +70,12 @@ Prototype support photos are from Unsplash, plus local Jazz pony photos supplied
 - Barnabas Davoti, roan pasture image
 - Pavan Naik, grazing field image
 - Rachel, grey pasture image
+To support single-page app routes opened directly in the browser (for example
+`/react-editor` in the address bar), pass a comma-separated route list as an
+optional third argument:
+
+```bash
+./scripts/upload_local_site.sh http://127.0.0.1:4173 uploaded-site react-editor,admin
+```
+
+The script uses `wget --mirror` with page requisites and link conversion so the downloaded site can be hosted or committed as static files.
