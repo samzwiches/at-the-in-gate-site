@@ -60,6 +60,7 @@ Open `index.html` in a browser, or serve this folder with any static server.
 - `data/shows.json` - simple show source data
 - `scripts/build-feed.js` - RSS/data generator
 - `assets/` - local pony photography and supporting show imagery
+- `facebook-marketplace.html`, `facebook-marketplace.css`, `facebook-marketplace.js` - standalone marketplace-only app prototype inspired by Facebook Marketplace style browse/filter/create flow
 
 ## Image Credits
 
