@@ -60,7 +60,6 @@ Open `index.html` in a browser, or serve this folder with any static server.
 - `data/shows.json` - simple show source data
 - `scripts/build-feed.js` - RSS/data generator
 - `assets/` - local pony photography and supporting show imagery
-- `facebook-marketplace.html`, `facebook-marketplace.css`, `facebook-marketplace.js` - standalone marketplace-only app prototype inspired by Facebook Marketplace style browse/filter/create flow
 
 ## Image Credits
 
@@ -71,12 +70,3 @@ Prototype support photos are from Unsplash, plus local Jazz pony photos supplied
 - Barnabas Davoti, roan pasture image
 - Pavan Naik, grazing field image
 - Rachel, grey pasture image
-To support single-page app routes opened directly in the browser (for example
-`/react-editor` in the address bar), pass a comma-separated route list as an
-optional third argument:
-
-```bash
-./scripts/upload_local_site.sh http://127.0.0.1:4173 uploaded-site react-editor,admin
-```
-
-The script uses `wget --mirror` with page requisites and link conversion so the downloaded site can be hosted or committed as static files.

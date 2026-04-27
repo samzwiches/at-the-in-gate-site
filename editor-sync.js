@@ -20,7 +20,28 @@
 
   function readEditorSite() {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      const site = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      if (!hasEditorPages(site)) return {};
+
+      const homePage = site.pages.find((page) => page.id === "home");
+      const homeCards = homePage?.sections?.find((section) => section.id === "cards-1");
+      const publishedHomePage = publishedEditorSite?.pages?.find((page) => page.id === "home");
+      const publishedHomeCards = publishedHomePage?.sections?.find((section) => section.id === "cards-1");
+
+      if (
+        homeCards &&
+        Array.isArray(homeCards.items) &&
+        homeCards.items.length === 3 &&
+        homeCards.title === "Start with the aisle you need" &&
+        publishedHomeCards &&
+        Array.isArray(publishedHomeCards.items) &&
+        publishedHomeCards.items.length > 3
+      ) {
+        homeCards.title = publishedHomeCards.title;
+        homeCards.items = publishedHomeCards.items;
+      }
+
+      return site;
     } catch (error) {
       console.warn("Could not read visual editor content.", error);
       return {};
@@ -70,6 +91,48 @@
 
   function firstSectionByType(page, type) {
     return page.sections.find((section) => section.type === type) || null;
+  }
+
+  function replaceSectionLede(root, page, section) {
+    const lede = root.querySelector(".horse-section .section-lede");
+    if (!lede || !section) return false;
+
+    const kicker = lede.querySelector(".kicker");
+    const title = lede.querySelector("h2");
+    const body = Array.from(lede.querySelectorAll("p")).find((item) => !item.classList.contains("kicker"));
+
+    if (kicker && page?.name) kicker.textContent = page.name;
+    if (title && section.title) title.textContent = section.title;
+    if (body && section.body) body.textContent = section.body;
+
+    return true;
+  }
+
+  function buildCardMarkup(page, item) {
+    const normalizedImage = normalizePublicValue(item.imageUrl || "");
+    const image = normalizedImage
+      ? `<img src="${normalizedImage}" alt="">`
+      : `<div class="program-preview" aria-hidden="true"><span>${page.name}</span><strong>${item.title || ""}</strong><p>${item.buttonLabel || ""}</p></div>`;
+    const link = normalizePublicValue(item.link || "#");
+
+    return `
+      <a class="image-card" href="${link}">
+        ${image}
+        <div>
+          <strong>${item.title || ""}</strong>
+          <p>${item.text || ""}</p>
+        </div>
+      </a>
+    `;
+  }
+
+  function replaceCardGrid(root, page, section) {
+    const grid = root.querySelector(".horse-section .image-card-grid");
+    if (!grid || !section) return false;
+
+    const items = Array.isArray(section.items) ? section.items : [];
+    grid.innerHTML = items.map((item) => buildCardMarkup(page, item)).join("");
+    return true;
   }
 
   function applyHeroSection(page, section, root) {
@@ -125,24 +188,7 @@
         <h2>${section.title || ""}</h2>
       </div>
       <div class="image-card-grid">
-        ${items
-          .map((item) => {
-            const normalizedImage = normalizePublicValue(item.imageUrl || "");
-            const image = normalizedImage
-              ? `<img src="${normalizedImage}" alt="">`
-              : `<div class="program-preview" aria-hidden="true"><span>${page.name}</span><strong>${item.title || ""}</strong><p>${item.buttonLabel || ""}</p></div>`;
-            const link = normalizePublicValue(item.link || "#");
-            return `
-              <a class="image-card" href="${link}">
-                ${image}
-                <div>
-                  <strong>${item.title || ""}</strong>
-                  <p>${item.text || ""}</p>
-                </div>
-              </a>
-            `;
-          })
-          .join("")}
+        ${items.map((item) => buildCardMarkup(page, item)).join("")}
       </div>
     `;
 
@@ -157,18 +203,20 @@
 
     const textSection = firstSectionByType(page, "text");
     const cardsSection = firstSectionByType(page, "cards");
-    if (!textSection && !cardsSection) return;
+    const textBoundToPage = replaceSectionLede(root, page, textSection);
+    const cardsBoundToPage = replaceCardGrid(root, page, cardsSection);
+    if ((!textSection || textBoundToPage) && (!cardsSection || cardsBoundToPage)) return;
 
     let anchor = main.querySelector(".subnav-ribbon") || main.querySelector(".page-cover") || main.querySelector(".mag-hero");
     if (!anchor) return;
 
-    if (textSection) {
+    if (textSection && !textBoundToPage) {
       const textNode = makeTextSection(page, textSection);
       anchor.insertAdjacentElement("afterend", textNode);
       anchor = textNode;
     }
 
-    if (cardsSection) {
+    if (cardsSection && !cardsBoundToPage) {
       const cardsNode = makeCardsSection(page, cardsSection);
       anchor.insertAdjacentElement("afterend", cardsNode);
     }

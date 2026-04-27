@@ -1,0 +1,52 @@
+{
+  "title": "Anything Test Page",
+  "slug": "anything-test-page",
+  "accent": "#214c3f",
+  "background": "#f7f8f4",
+  "blocks": [
+    {
+      "id": "hero-1777071265172-141bfe",
+      "type": "hero",
+      "eyebrow": "New page",
+      "heading": "Build the page you need.",
+      "body": "Start with a clear promise, then add the sections that make the idea feel real.",
+      "buttonText": "Start here",
+      "buttonLink": "#",
+      "imageUrl": ""
+    },
+    {
+      "id": "text-1777071265172-098113",
+      "type": "text",
+      "heading": "Tell the story plainly.",
+      "body": "Use this section for context, details, instructions, FAQs, policies, or anything that needs a little room."
+    },
+    {
+      "id": "feature-grid-1777071265172-910d56",
+      "type": "feature-grid",
+      "heading": "Useful details",
+      "items": [
+        {
+          "id": "item-1777071265172-b5968c",
+          "title": "First thing",
+          "text": "A short explanation people can scan.",
+          "imageUrl": "",
+          "link": "#"
+        },
+        {
+          "id": "item-1777071265172-625b3e",
+          "title": "Second thing",
+          "text": "Make it practical, specific, and easy to compare.",
+          "imageUrl": "",
+          "link": "#"
+        },
+        {
+          "id": "item-1777071265172-a3f6a3",
+          "title": "Third thing",
+          "text": "Add a final reason this matters.",
+          "imageUrl": "",
+          "link": "#"
+        }
+      ]
+    }
+  ]
+}

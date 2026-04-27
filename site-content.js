@@ -70,25 +70,25 @@ const ATIG_DEFAULT_CONTENT = {
     },
     featured: {
       mischief: {
-        image: "assets/atig-bay-pony-jump.jpg",
-        alt: "Large bay pony jumping in the hunter ring",
-        badge: "Video ready",
-        title: "Blue Ribbon Mischief",
-        text: "Large pony lease. Lexington, KY. Mid-five lease. Division kid."
+        image: "assets/atig-dark-pony-portrait.png",
+        alt: "Placeholder pony listing image",
+        badge: "Placeholder listing",
+        title: "Featured Pony Listing",
+        text: "Add pony name, size, location, rider fit, and sale or lease terms here."
       },
       buttons: {
-        image: "assets/pony-vintage-white-wide.jpg",
-        alt: "Small white pony with a child rider in an old photo",
-        badge: "Child-safe",
-        title: "Buttons and Bows",
-        text: "Small pony for sale. Princeton, NJ. $14,500. Walk-trot to short stirrup."
+        image: "assets/pony-black-background.jpg",
+        alt: "Placeholder pony sale image",
+        badge: "Sale placeholder",
+        title: "Second Pony Listing",
+        text: "Use this card for another pony listing, archive feature, or promoted ad."
       },
       moonPie: {
-        image: "assets/pony-possum-brick-jump.png",
-        alt: "Chestnut pony jumping a brick-style fence",
-        badge: "Green large",
-        title: "Moon Pie",
-        text: "Large pony lease. Columbus, OH. Annual lease. Needs miles and a good program."
+        image: "assets/barn-silhouette.jpg",
+        alt: "Placeholder listing or story image",
+        badge: "Lease placeholder",
+        title: "Third Pony Listing",
+        text: "Add a third pony, featured story, or sponsor spot when you are ready."
       }
     },
     showCards: {

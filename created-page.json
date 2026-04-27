@@ -1,0 +1,52 @@
+{
+  "title": "Untitled Page",
+  "slug": "created-page",
+  "accent": "#214c3f",
+  "background": "#f7f8f4",
+  "blocks": [
+    {
+      "id": "hero-1777216032093-cbf820",
+      "type": "hero",
+      "eyebrow": "New page",
+      "heading": "Build the page you need.",
+      "body": "Start with a clear promise, then add the sections that make the idea feel real.",
+      "buttonText": "Start here",
+      "buttonLink": "#",
+      "imageUrl": ""
+    },
+    {
+      "id": "text-1777216032093-6384a2",
+      "type": "text",
+      "heading": "Tell the story plainly.",
+      "body": "Use this section for context, details, instructions, FAQs, policies, or anything that needs a little room."
+    },
+    {
+      "id": "feature-grid-1777216032093-e5712a",
+      "type": "feature-grid",
+      "heading": "Useful details",
+      "items": [
+        {
+          "id": "item-1777216032093-bb6aa3",
+          "title": "First thing",
+          "text": "A short explanation people can scan.",
+          "imageUrl": "",
+          "link": "#"
+        },
+        {
+          "id": "item-1777216032093-52f6d3",
+          "title": "Second thing",
+          "text": "Make it practical, specific, and easy to compare.",
+          "imageUrl": "",
+          "link": "#"
+        },
+        {
+          "id": "item-1777216032093-0b3966",
+          "title": "Third thing",
+          "text": "Add a final reason this matters.",
+          "imageUrl": "",
+          "link": "#"
+        }
+      ]
+    }
+  ]
+}
