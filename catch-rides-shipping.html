@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catch Rides & Shipping | At The In Gate</title>
+    <meta name="description" content="Catch riders, shipping routes, trainers, braiders, grooms, and useful services for hunter jumper people.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="horse-page">
+    <div id="siteHeader"></div>
+    <main>
+      <section class="page-cover">
+        <div>
+          <p class="kicker">Catch Rides & Shipping</p>
+          <h1>Right kid. Right pony. Right trailer.</h1>
+          <p>Rider available, rider needed, shipping routes, trainers, braiders, grooms, photographers, and the useful barn people who make show life work.</p>
+          <div class="hero-actions">
+            <a href="#catch-rides">Catch Rides</a>
+            <a href="#shipping">Shipping Routes</a>
+            <a href="#need-shipping">Need Shipping</a>
+            <a href="#services">Services</a>
+            <a href="list-service.html">List a Service</a>
+          </div>
+        </div>
+        <img src="assets/pony-handler-trailer.jpg" alt="Pony and handler near a trailer">
+      </section>
+
+      <nav class="subnav-ribbon" aria-label="Catch rides and shipping sections">
+        <a href="#helper-board">Post Board</a>
+        <a href="#rider-available">Rider Available</a>
+        <a href="#rider-needed">Need a Rider</a>
+        <a href="#shipping">Shipping Routes</a>
+        <a href="#need-shipping">Need Shipping</a>
+        <a href="#services">Services</a>
+      </nav>
+
+      <section class="horse-section tint" id="helper-board">
+        <div class="section-lede">
+          <p class="kicker">Post Board</p>
+          <h2>Filter by what you need.</h2>
+          <p>Photo, title, location, tags, and one useful note. Click a card to get the full path behind a Barn Pass.</p>
+        </div>
+        <div class="utility-filter-bar">
+          <label><span>Need</span><select id="utilityTypeFilter"><option value="all">Everything</option><option value="rider-available">Rider available</option><option value="rider-needed">Need a rider</option><option value="shipping-route">Shipping route</option><option value="need-shipping">Need shipping</option><option value="service">Services</option></select></label>
+          <label><span>Region</span><select id="utilityRegionFilter"><option value="all">All regions</option><option value="zone-2">Zone 2</option><option value="zone-3">Zone 3</option><option value="fl-ky">FL to KY</option><option value="fl-pa">FL to PA</option></select></label>
+          <label><span>Pony or service</span><select id="utilitySizeFilter"><option value="all">All</option><option value="pony">Pony</option><option value="service">Service</option></select></label>
+        </div>
+        <div class="listing-feature-grid">
+          <a class="listing-feature utility-post" href="login.html" data-type="rider-available" data-region="zone-3" data-size="pony"><img class="fit-contain" src="assets/atig-catchride-cutout.png" alt="Catch ride pony and rider"><div><span>Rider available</span><strong>Handy junior for large ponies</strong><p>Lexington area. Trainer references. Sale video help and local show miles.</p><div class="fact-row"><span>Zone 3</span><span>Pony</span><span>Large</span></div></div></a>
+          <a class="listing-feature utility-post" href="login.html" data-type="rider-needed" data-region="zone-2" data-size="pony"><img src="assets/pony-possum-brick-jump.png" alt="Pony jumping a show fence"><div><span>Need a rider</span><strong>Green medium needs a quiet round</strong><p>Virginia. Current video. Trainer on site. Parent permission required.</p><div class="fact-row"><span>Zone 2</span><span>Pony</span><span>Medium</span></div></div></a>
+          <a class="listing-feature utility-post" href="login.html" data-type="shipping-route" data-region="fl-pa" data-size="pony"><img src="assets/pony-handler-trailer.jpg" alt="Pony and handler by a trailer"><div><span>Shipping route</span><strong>Wellington to Devon</strong><p>Shared route, one pony spot, trunk room, and layover notes available.</p><div class="fact-row"><span>FL to PA</span><span>Pony</span><span>1 spot</span></div></div></a>
+          <a class="listing-feature utility-post" href="login.html" data-type="need-shipping" data-region="fl-ky" data-size="pony"><img src="assets/pony-bridle-close.jpg" alt="Pony being handled quietly"><div><span>Need shipping</span><strong>Ocala to Lexington</strong><p>Quiet pony, flexible timing, looking for references and gentle handling.</p><div class="fact-row"><span>FL to KY</span><span>Pony</span><span>Flexible</span></div></div></a>
+          <a class="listing-feature utility-post" href="list-service.html" data-type="service" data-region="zone-2" data-size="service"><img src="assets/atig-show-barn-aisle.jpg" alt="Show barn aisle with stalls"><div><span>Service</span><strong>Braider available at Upperville</strong><p>Rates, photos, early-morning availability, and payment notes.</p><div class="fact-row"><span>Zone 2</span><span>Braider</span><span>Show week</span></div></div></a>
+          <a class="listing-feature utility-post" href="list-service.html" data-type="service" data-region="zone-3" data-size="service"><img src="assets/atig-bay-pony-jump.jpg" alt="Pony jumping in a hunter ring"><div><span>Service</span><strong>Sale video help near Lexington</strong><p>Flat, fences, conformation clips, and tidy short edits for listings.</p><div class="fact-row"><span>Zone 3</span><span>Video</span><span>Listing help</span></div></div></a>
+        </div>
+        <p class="status-line" id="utilityFilterStatus">Showing all helper board posts.</p>
+      </section>
+
+      <section class="horse-section white" id="catch-rides">
+        <div class="section-lede">
+          <p class="kicker">Catch Rides</p>
+          <h2>Put the details where everybody can compare them.</h2>
+          <p>Division, height, dates, location, trainer permission, video, rate, and what kind of ride the pony actually needs.</p>
+        </div>
+        <div class="image-card-grid">
+          <a class="image-card" href="#rider-available"><img class="fit-contain" src="assets/atig-catchride-cutout.png" alt="Catch ride pony and rider"><div><strong>Rider Available</strong><p>Handy kids, quiet rides, local miles, and trainer references.</p></div></a>
+          <a class="image-card" href="#rider-needed"><img src="assets/pony-possum-brick-jump.png" alt="Pony jumping a fence"><div><strong>Rider Needed</strong><p>Green pony, sale video, local show, warm-up, or last-minute help.</p></div></a>
+          <a class="image-card" href="rules.html"><img src="assets/pony-bridle-close.jpg" alt="Pony being handled quietly"><div><strong>Safety First</strong><p>Parent permission, trainer permission, release forms, and clear expectations.</p></div></a>
+        </div>
+      </section>
+
+      <section class="horse-section tint" id="rider-available">
+        <div class="section-lede">
+          <p class="kicker">Rider Available</p>
+          <h2>Good hands looking for useful rounds.</h2>
+          <p>Short, specific posts make good matches faster.</p>
+        </div>
+        <div class="rail-room-grid">
+          <a class="rail-room" href="login.html"><span>Large ponies</span><h3>Junior available in Kentucky</h3><p>Handy, quiet, trainer references, Sundays within three hours of Lexington.</p></a>
+          <a class="rail-room" href="login.html"><span>Mediums</span><h3>Zone 2 rider available</h3><p>Local mileage, sale video help, and green pony patience.</p></a>
+          <a class="rail-room" href="list-service.html"><span>Post availability</span><h3>Add a rider card</h3><p>Linked to an adult account if the rider is a minor.</p></a>
+        </div>
+      </section>
+
+      <section class="horse-section white" id="rider-needed">
+        <div class="section-lede">
+          <p class="kicker">Rider Needed</p>
+          <h2>Say the job clearly.</h2>
+          <p>Not every catch ride is the same. Is this a quiet confidence round, a handy trip, a sale video, or a pony who needs tact?</p>
+        </div>
+        <div class="rail-room-grid">
+          <a class="rail-room" href="login.html"><span>Need rider</span><h3>Large pony Saturday</h3><p>Lexington. Quiet ride needed. Current video included.</p></a>
+          <a class="rail-room" href="login.html"><span>Sale video</span><h3>Green medium in Virginia</h3><p>Needs confident child and simple changes. Trainer on site.</p></a>
+          <a class="rail-room" href="list-service.html"><span>Post a need</span><h3>Find a rider</h3><p>Add date, ring, pony size, trainer contact, and expectations.</p></a>
+        </div>
+      </section>
+
+      <section class="horse-section tint" id="shipping">
+        <div class="section-lede">
+          <p class="kicker">Shipping Routes</p>
+          <h2>Are you already going that way?</h2>
+          <p>Trailer seats, shared routes, layovers, references, timing, and pony comfort notes.</p>
+        </div>
+        <div class="listing-feature-grid">
+          <a class="listing-feature" href="login.html"><img src="assets/pony-handler-trailer.jpg" alt="Pony and handler beside a trailer"><div><span>2 pony spots</span><strong>Ocala to Lexington</strong><p>Mid-May. References available. Gentle shipper preferred.</p><div class="fact-row"><span>FL to KY</span><span>2 spots</span><span>Flexible</span></div></div></a>
+          <a class="listing-feature" href="login.html"><img src="assets/pony-bridle-close.jpg" alt="Pony being handled"><div><span>Shared route</span><strong>Wellington to Devon</strong><p>Looking for shared route, trunk space, and calm handling.</p><div class="fact-row"><span>FL to PA</span><span>1 pony</span><span>Show trunk</span></div></div></a>
+          <a class="listing-feature" href="list-service.html"><div class="program-preview" aria-hidden="true"><span>Route</span><strong>Shipping</strong><p>Dates, stops, references.</p></div><div><span>Post route</span><strong>List a shipping route</strong><p>Dates, stops, references, layover notes, and phone path.</p><div class="fact-row"><span>Route</span><span>Dates</span><span>References</span></div></div></a>
+        </div>
+      </section>
+
+      <section class="horse-section white" id="need-shipping">
+        <div class="section-lede">
+          <p class="kicker">Need Shipping</p>
+          <h2>Post the route before the text chain gets ridiculous.</h2>
+          <p>Where from, where to, date window, pony size, trunk needs, layover preferences, and handling notes.</p>
+        </div>
+        <div class="rail-room-grid">
+          <a class="rail-room" href="login.html"><span>Need shipping</span><h3>Ocala to Lexington</h3><p>Quiet large pony, flexible by a few days, references required.</p></a>
+          <a class="rail-room" href="login.html"><span>Need shipping</span><h3>Princeton to Devon</h3><p>Small pony and trunk. Prefer shipper already going to the showgrounds.</p></a>
+          <a class="rail-room" href="list-service.html"><span>Post a route</span><h3>Ask for shipping</h3><p>Add dates, exact route, pony notes, and what kind of hauler makes sense.</p></a>
+        </div>
+      </section>
+
+      <section class="horse-section tint" id="services">
+        <div class="section-lede">
+          <p class="kicker">Services</p>
+          <h2>The people who keep show day moving.</h2>
+          <p>Trainers, braiders, grooms, bodyworkers, photographers, videographers, and the barn services everyone asks for too late.</p>
+        </div>
+        <div class="image-card-grid">
+          <a class="image-card" href="list-service.html"><img src="assets/pony-trainer-walk-in.png" alt="Trainer walking a pony"><div><strong>Trainers</strong><p>Programs, sale help, lease guidance, show schedules, and references.</p></div></a>
+          <a class="image-card" href="list-service.html"><img src="assets/atig-show-barn-aisle.jpg" alt="Quiet show barn aisle"><div><strong>Braiders & Grooms</strong><p>Rates, availability, photos, payment notes, and show location.</p></div></a>
+          <a class="image-card" href="list-service.html"><img src="assets/atig-bay-pony-jump.jpg" alt="Pony jumping in the show ring"><div><strong>Photo & Video</strong><p>Sales media, show rounds, candids, and pony kid memories.</p></div></a>
+        </div>
+      </section>
+    </main>
+    <div id="siteFooter"></div>
+    <script src="site-shell.js"></script>
+    <script src="editor-sync.js"></script>
+    <script src="utility-board.js"></script>
+  </body>
+</html>

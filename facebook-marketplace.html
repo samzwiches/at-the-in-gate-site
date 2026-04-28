@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace Only App</title>
+    <meta name="description" content="A Facebook Marketplace style buying and selling app focused only on listings.">
+    <link rel="stylesheet" href="facebook-marketplace.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Marketplace</div>
+      <form id="searchForm" class="search-wrap" role="search">
+        <input id="keywordInput" type="search" placeholder="Search listings" aria-label="Search listings">
+      </form>
+      <button id="sellButton" class="sell-button" type="button">+ Create listing</button>
+    </header>
+
+    <main class="layout">
+      <aside class="filters" aria-label="Listing filters">
+        <h1>Marketplace</h1>
+        <p class="subhead">Only listings, no feed, no groups, no chat.</p>
+
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+          <option value="vehicles">Vehicles</option>
+          <option value="electronics">Electronics</option>
+          <option value="furniture">Furniture</option>
+          <option value="home">Home & garden</option>
+          <option value="clothing">Clothing</option>
+        </select>
+
+        <label for="conditionFilter">Condition</label>
+        <select id="conditionFilter">
+          <option value="all">Any condition</option>
+          <option value="new">New</option>
+          <option value="like-new">Like new</option>
+          <option value="good">Good</option>
+          <option value="fair">Fair</option>
+        </select>
+
+        <label for="priceFilter">Price range</label>
+        <select id="priceFilter">
+          <option value="all">Any price</option>
+          <option value="under100">Under $100</option>
+          <option value="100to500">$100 - $500</option>
+          <option value="500to2000">$500 - $2,000</option>
+          <option value="over2000">Over $2,000</option>
+        </select>
+
+        <label for="distanceFilter">Distance</label>
+        <select id="distanceFilter">
+          <option value="all">Any distance</option>
+          <option value="5">Within 5 miles</option>
+          <option value="10">Within 10 miles</option>
+          <option value="25">Within 25 miles</option>
+          <option value="50">Within 50 miles</option>
+        </select>
+
+        <label for="sortFilter">Sort by</label>
+        <select id="sortFilter">
+          <option value="recommended">Recommended</option>
+          <option value="newest">Newest</option>
+          <option value="price-low">Price: Low to high</option>
+          <option value="price-high">Price: High to low</option>
+        </select>
+
+        <button id="clearButton" class="clear-button" type="button">Clear filters</button>
+      </aside>
+
+      <section class="results" aria-live="polite">
+        <div class="results-head">
+          <h2>Today's picks</h2>
+          <p><span id="resultCount">0</span> items</p>
+        </div>
+
+        <div id="listingGrid" class="listing-grid"></div>
+
+        <div id="emptyState" class="empty" hidden>
+          <h3>No listings found</h3>
+          <p>Try widening your filters or search for a different keyword.</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="createDialog">
+      <form id="createForm" method="dialog" class="create-form">
+        <h3>Create listing</h3>
+        <p>This is a frontend-only demo. New listings are added in memory.</p>
+
+        <label for="titleInput">Title</label>
+        <input id="titleInput" required>
+
+        <label for="categoryInput">Category</label>
+        <select id="categoryInput" required>
+          <option value="vehicles">Vehicles</option>
+          <option value="electronics">Electronics</option>
+          <option value="furniture">Furniture</option>
+          <option value="home">Home & garden</option>
+          <option value="clothing">Clothing</option>
+        </select>
+
+        <label for="priceInput">Price (USD)</label>
+        <input id="priceInput" type="number" min="1" step="1" required>
+
+        <label for="conditionInput">Condition</label>
+        <select id="conditionInput" required>
+          <option value="new">New</option>
+          <option value="like-new">Like new</option>
+          <option value="good">Good</option>
+          <option value="fair">Fair</option>
+        </select>
+
+        <label for="locationInput">Location</label>
+        <input id="locationInput" required>
+
+        <label for="distanceInput">Distance (miles)</label>
+        <input id="distanceInput" type="number" min="1" max="100" required>
+
+        <label for="imageInput">Image URL</label>
+        <input id="imageInput" type="url" placeholder="https://...">
+
+        <menu>
+          <button value="cancel" type="reset">Cancel</button>
+          <button value="default" type="submit">Save listing</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="facebook-marketplace.js"></script>
+  </body>
+</html>

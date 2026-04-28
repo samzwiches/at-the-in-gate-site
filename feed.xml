@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:attheingate="https://attheingate.com/rss/namespace">
+  <channel>
+    <title>At The In Gate USHJA Zone Show Schedule</title>
+    <link>https://attheingate.com/feed.xml</link>
+    <description>Hunter jumper horse show schedule organized by USHJA zone.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Apr 2026 12:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Zone 9: Spring National Hunter</title>
+      <link>https://attheingate.com/shows/zone9/spring-national-hunter-2026</link>
+      <description>USHJA Zone 9 Handy Hunter Challenge at Spring National Hunter. Dates: Apr 15 - Apr 19, 2026. Location: Monroe, WA. Source: https://www.ushja.org/zones-affiliates/zone-9/competition</description>
+      <pubDate>Wed, 15 Apr 2026 12:00:00 GMT</pubDate>
+      <category>Zone 9</category>
+      <guid isPermaLink="false">zone-9-spring-national-hunter-2026</guid>
+      <attheingate:zone>9</attheingate:zone>
+      <attheingate:startDate>2026-04-15</attheingate:startDate>
+      <attheingate:endDate>2026-04-19</attheingate:endDate>
+      <attheingate:location>Monroe, WA</attheingate:location>
+      <attheingate:program>Zone 9 Handy Hunter Challenge</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-9/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 6: Omaha Equestrian Preview</title>
+      <link>https://attheingate.com/shows/zone6/omaha-equestrian-preview-2026</link>
+      <description>USHJA Zone 6 Handy Hunter Challenge at Omaha Equestrian Preview. Dates: Apr 16 - Apr 19, 2026. Location: Elkhorn, NE. Source: https://www.ushja.org/zones-affiliates/zone-6/competition-new</description>
+      <pubDate>Thu, 16 Apr 2026 12:00:00 GMT</pubDate>
+      <category>Zone 6</category>
+      <guid isPermaLink="false">zone-6-omaha-equestrian-preview-2026</guid>
+      <attheingate:zone>6</attheingate:zone>
+      <attheingate:startDate>2026-04-16</attheingate:startDate>
+      <attheingate:endDate>2026-04-19</attheingate:endDate>
+      <attheingate:location>Elkhorn, NE</attheingate:location>
+      <attheingate:program>Zone 6 Handy Hunter Challenge</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-6/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 4: Aiken Summer Classic I</title>
+      <link>https://attheingate.com/shows/zone4/aiken-summer-classic-i-2026</link>
+      <description>USHJA Zone 4 Hunt &amp; Go Team Challenge at Aiken Summer Classic I. Dates: Jun 10 - Jun 14, 2026. Location: Aiken, SC. Source: https://www.ushja.org/zones-affiliates/zone-4/competition-new</description>
+      <pubDate>Wed, 10 Jun 2026 12:00:00 GMT</pubDate>
+      <category>Zone 4</category>
+      <guid isPermaLink="false">zone-4-aiken-summer-classic-i-2026</guid>
+      <attheingate:zone>4</attheingate:zone>
+      <attheingate:startDate>2026-06-10</attheingate:startDate>
+      <attheingate:endDate>2026-06-14</attheingate:endDate>
+      <attheingate:location>Aiken, SC</attheingate:location>
+      <attheingate:program>Zone 4 Hunt &amp; Go Team Challenge</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-4/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 6: Mid States Summer</title>
+      <link>https://attheingate.com/shows/zone6/mid-states-summer-2026</link>
+      <description>USHJA Zone 6 Zandra Powers Horsemanship Class at Mid States Summer. Dates: Jun 10 - Jun 14, 2026. Location: Mason City, IA. Source: https://www.ushja.org/zones-affiliates/zone-6/competition-new</description>
+      <pubDate>Wed, 10 Jun 2026 12:00:00 GMT</pubDate>
+      <category>Zone 6</category>
+      <guid isPermaLink="false">zone-6-mid-states-summer-2026</guid>
+      <attheingate:zone>6</attheingate:zone>
+      <attheingate:startDate>2026-06-10</attheingate:startDate>
+      <attheingate:endDate>2026-06-14</attheingate:endDate>
+      <attheingate:location>Mason City, IA</attheingate:location>
+      <attheingate:program>Zone 6 Zandra Powers Horsemanship Class</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-6/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 5: Brave Horse V</title>
+      <link>https://attheingate.com/shows/zone5/brave-horse-v-2026</link>
+      <description>USHJA Zone 5 Hunt &amp; Go Team Challenge at Brave Horse V. Dates: Jun 25 - Jun 28, 2026. Location: Johnstown, OH. Source: https://www.ushja.org/zones-affiliates/zone-5/competition</description>
+      <pubDate>Thu, 25 Jun 2026 12:00:00 GMT</pubDate>
+      <category>Zone 5</category>
+      <guid isPermaLink="false">zone-5-brave-horse-v-2026</guid>
+      <attheingate:zone>5</attheingate:zone>
+      <attheingate:startDate>2026-06-25</attheingate:startDate>
+      <attheingate:endDate>2026-06-28</attheingate:endDate>
+      <attheingate:location>Johnstown, OH</attheingate:location>
+      <attheingate:program>Zone 5 Hunt &amp; Go Team Challenge</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-5/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 11: Princeton Show Jumping Summer II</title>
+      <link>https://attheingate.com/shows/zone11/princeton-show-jumping-summer-ii-2026</link>
+      <description>USHJA notes that athletes from Zones 11 and 12 may qualify and apply to attend the Zone Jumper Championship location of their choosing. Princeton Show Jumping Summer II is one listed 2026 championship site. Dates: Jul 1 - Jul 5, 2026. Location: Princeton, NJ. Source: https://www.ushja.org/news/ushja-news-1/2026-dates-and-locations-announced-ushja-jumper-championships</description>
+      <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Zone 11</category>
+      <guid isPermaLink="false">zone-11-princeton-show-jumping-summer-ii-2026</guid>
+      <attheingate:zone>11</attheingate:zone>
+      <attheingate:startDate>2026-07-01</attheingate:startDate>
+      <attheingate:endDate>2026-07-05</attheingate:endDate>
+      <attheingate:location>Princeton, NJ</attheingate:location>
+      <attheingate:program>USHJA Zone Jumper Championship choice location</attheingate:program>
+      <attheingate:status>zone-choice-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/news/ushja-news-1/2026-dates-and-locations-announced-ushja-jumper-championships</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 3: Rose Mount Farm Summer</title>
+      <link>https://attheingate.com/shows/zone3/rose-mount-farm-summer-2026</link>
+      <description>USHJA Zone 3 equitation championship at Rose Mount Farm Summer. Dates: Jul 23 - Jul 26, 2026. Location: Spotsylvania, VA. Source: https://www.ushja.org/zones-affiliates/zone-3/competition</description>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Zone 3</category>
+      <guid isPermaLink="false">zone-3-rose-mount-farm-summer-2026</guid>
+      <attheingate:zone>3</attheingate:zone>
+      <attheingate:startDate>2026-07-23</attheingate:startDate>
+      <attheingate:endDate>2026-07-26</attheingate:endDate>
+      <attheingate:location>Spotsylvania, VA</attheingate:location>
+      <attheingate:program>L.M. Sandy Gerald USHJA Zone 3 Equitation Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-3/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 2: Saratoga Summer</title>
+      <link>https://attheingate.com/shows/zone2/saratoga-summer-2026</link>
+      <description>USHJA Zone 2 HOTY hunter, jumper, equitation, hunter breeding, and equitation medal championship at Saratoga Summer. Dates: Aug 12 - Aug 16, 2026. Location: Stillwater, NY. Source: https://www.ushja.org/zones-affiliates/zone-2/competition-new</description>
+      <pubDate>Wed, 12 Aug 2026 12:00:00 GMT</pubDate>
+      <category>Zone 2</category>
+      <guid isPermaLink="false">zone-2-saratoga-summer-2026</guid>
+      <attheingate:zone>2</attheingate:zone>
+      <attheingate:startDate>2026-08-12</attheingate:startDate>
+      <attheingate:endDate>2026-08-16</attheingate:endDate>
+      <attheingate:location>Stillwater, NY</attheingate:location>
+      <attheingate:program>Zone 2 Horse of the Year and Equitation Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-2/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 9: Northwest Spectacular</title>
+      <link>https://attheingate.com/shows/zone9/northwest-spectacular-2026</link>
+      <description>USHJA Zone 9 HOTY jumper and equitation championship at Northwest Spectacular. Dates: Aug 26 - Aug 30, 2026. Location: Wilsonville, OR. Source: https://www.ushja.org/zones-affiliates/zone-9/competition</description>
+      <pubDate>Wed, 26 Aug 2026 12:00:00 GMT</pubDate>
+      <category>Zone 9</category>
+      <guid isPermaLink="false">zone-9-northwest-spectacular-2026</guid>
+      <attheingate:zone>9</attheingate:zone>
+      <attheingate:startDate>2026-08-26</attheingate:startDate>
+      <attheingate:endDate>2026-08-30</attheingate:endDate>
+      <attheingate:location>Wilsonville, OR</attheingate:location>
+      <attheingate:program>Zone 9 HOTY Jumper, Equitation, and Equitation Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-9/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 1: ESE Heritage Show I</title>
+      <link>https://attheingate.com/shows/zone1/ese-heritage-show-i-2026</link>
+      <description>USHJA Zone 1 HOTY hunter, equitation, and hunter breeding championship at ESE Heritage Show I. Dates: Sep 2 - Sep 6, 2026. Location: West Springfield, MA. Source: https://www.ushja.org/zones-affiliates/zone-1/competition</description>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Zone 1</category>
+      <guid isPermaLink="false">zone-1-ese-heritage-show-i-2026</guid>
+      <attheingate:zone>1</attheingate:zone>
+      <attheingate:startDate>2026-09-02</attheingate:startDate>
+      <attheingate:endDate>2026-09-06</attheingate:endDate>
+      <attheingate:location>West Springfield, MA</attheingate:location>
+      <attheingate:program>Zone 1 Horse of the Year Hunter, Equitation, and Hunter Breeding Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-1/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 3: Warrenton Horse Show</title>
+      <link>https://attheingate.com/shows/zone3/warrenton-horse-show-2026</link>
+      <description>USHJA Zone 3 HOTY hunter breeding championship at Warrenton Horse Show. Dates: Sep 2 - Sep 6, 2026. Location: Warrenton, VA. Source: https://www.ushja.org/zones-affiliates/zone-3/competition</description>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Zone 3</category>
+      <guid isPermaLink="false">zone-3-warrenton-horse-show-2026</guid>
+      <attheingate:zone>3</attheingate:zone>
+      <attheingate:startDate>2026-09-02</attheingate:startDate>
+      <attheingate:endDate>2026-09-06</attheingate:endDate>
+      <attheingate:location>Warrenton, VA</attheingate:location>
+      <attheingate:program>Zone 3 HOTY Hunter Breeding Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-3/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 5: Showplace Fall Classic</title>
+      <link>https://attheingate.com/shows/zone5/showplace-fall-classic-2026</link>
+      <description>USHJA Zone 5 HOTY hunter, jumper, and equitation championship at Showplace Fall Classic. Dates: Sep 2 - Sep 6, 2026. Location: Roscoe, IL. Source: https://www.ushja.org/zones-affiliates/zone-5/competition</description>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Zone 5</category>
+      <guid isPermaLink="false">zone-5-showplace-fall-classic-2026</guid>
+      <attheingate:zone>5</attheingate:zone>
+      <attheingate:startDate>2026-09-02</attheingate:startDate>
+      <attheingate:endDate>2026-09-06</attheingate:endDate>
+      <attheingate:location>Roscoe, IL</attheingate:location>
+      <attheingate:program>Zone 5 Horse of the Year Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-5/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 1: Fieldstone Northeast Classic</title>
+      <link>https://attheingate.com/shows/zone1/fieldstone-northeast-classic-2026</link>
+      <description>USHJA Zone 1 HOTY jumper championship at Fieldstone Northeast Classic. Dates: Sep 8 - Sep 13, 2026. Location: Halifax, MA. Source: https://www.ushja.org/zones-affiliates/zone-1/competition</description>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Zone 1</category>
+      <guid isPermaLink="false">zone-1-fieldstone-northeast-classic-2026</guid>
+      <attheingate:zone>1</attheingate:zone>
+      <attheingate:startDate>2026-09-08</attheingate:startDate>
+      <attheingate:endDate>2026-09-13</attheingate:endDate>
+      <attheingate:location>Halifax, MA</attheingate:location>
+      <attheingate:program>Zone 1 Horse of the Year Jumper Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-1/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 7: St. Louis National Charity</title>
+      <link>https://attheingate.com/shows/zone7/st-louis-national-charity-2026</link>
+      <description>USHJA Zone 7 Hunt &amp; Go Team Challenge at St. Louis National Charity. Dates: Sep 9 - Sep 13, 2026. Location: Lake St. Louis, MO. Source: https://www.ushja.org/zones-affiliates/zone-7/competition-new</description>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Zone 7</category>
+      <guid isPermaLink="false">zone-7-st-louis-national-charity-2026</guid>
+      <attheingate:zone>7</attheingate:zone>
+      <attheingate:startDate>2026-09-09</attheingate:startDate>
+      <attheingate:endDate>2026-09-13</attheingate:endDate>
+      <attheingate:location>Lake St. Louis, MO</attheingate:location>
+      <attheingate:program>Zone 7 Hunt &amp; Go Team Challenge</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-7/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 6: Mid States Fall</title>
+      <link>https://attheingate.com/shows/zone6/mid-states-fall-2026</link>
+      <description>USHJA Zone 6 HOTY hunter, jumper, equitation, and hunter breeding championship at Mid States Fall. Dates: Sep 10 - Sep 14, 2026. Location: Mason City, IA. Source: https://www.ushja.org/zones-affiliates/zone-6/competition-new</description>
+      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Zone 6</category>
+      <guid isPermaLink="false">zone-6-mid-states-fall-2026</guid>
+      <attheingate:zone>6</attheingate:zone>
+      <attheingate:startDate>2026-09-10</attheingate:startDate>
+      <attheingate:endDate>2026-09-14</attheingate:endDate>
+      <attheingate:location>Mason City, IA</attheingate:location>
+      <attheingate:program>Zone 6 Horse of the Year Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-6/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 9: Northwest Autumn Classic</title>
+      <link>https://attheingate.com/shows/zone9/northwest-autumn-classic-2026</link>
+      <description>USHJA Zone 9 HOTY hunter championship at Northwest Autumn Classic. Dates: Sep 16 - Sep 20, 2026. Location: Monroe, WA. Source: https://www.ushja.org/zones-affiliates/zone-9/competition</description>
+      <pubDate>Wed, 16 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Zone 9</category>
+      <guid isPermaLink="false">zone-9-northwest-autumn-classic-2026</guid>
+      <attheingate:zone>9</attheingate:zone>
+      <attheingate:startDate>2026-09-16</attheingate:startDate>
+      <attheingate:endDate>2026-09-20</attheingate:endDate>
+      <attheingate:location>Monroe, WA</attheingate:location>
+      <attheingate:program>Zone 9 HOTY Hunter Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-9/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 3: WIHS Regional Horse Show</title>
+      <link>https://attheingate.com/shows/zone3/wihs-regional-horse-show-2026</link>
+      <description>USHJA Zone 3 HOTY hunter and jumper championship plus Hunt &amp; Go Team Challenge at WIHS Regional Horse Show. Dates: Oct 15 - Oct 18, 2026. Location: Leesburg, VA. Source: https://www.ushja.org/zones-affiliates/zone-3/competition</description>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Zone 3</category>
+      <guid isPermaLink="false">zone-3-wihs-regional-horse-show-2026</guid>
+      <attheingate:zone>3</attheingate:zone>
+      <attheingate:startDate>2026-10-15</attheingate:startDate>
+      <attheingate:endDate>2026-10-18</attheingate:endDate>
+      <attheingate:location>Leesburg, VA</attheingate:location>
+      <attheingate:program>Zone 3 HOTY Hunter and Jumper Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-3/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 12: National Sunshine Series I</title>
+      <link>https://attheingate.com/shows/zone12/national-sunshine-series-i-2026</link>
+      <description>USHJA notes that athletes from Zones 11 and 12 may qualify and apply to attend the Zone Jumper Championship location of their choosing. National Sunshine Series I is one listed 2026 championship site. Dates: Oct 28 - Nov 1, 2026. Location: Thermal, CA. Source: https://www.ushja.org/news/ushja-news-1/2026-dates-and-locations-announced-ushja-jumper-championships</description>
+      <pubDate>Wed, 28 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Zone 12</category>
+      <guid isPermaLink="false">zone-12-national-sunshine-series-i-2026</guid>
+      <attheingate:zone>12</attheingate:zone>
+      <attheingate:startDate>2026-10-28</attheingate:startDate>
+      <attheingate:endDate>2026-11-01</attheingate:endDate>
+      <attheingate:location>Thermal, CA</attheingate:location>
+      <attheingate:program>USHJA Zone Jumper Championship choice location</attheingate:program>
+      <attheingate:status>zone-choice-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/news/ushja-news-1/2026-dates-and-locations-announced-ushja-jumper-championships</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 4: Harvest Time</title>
+      <link>https://attheingate.com/shows/zone4/harvest-time-2026</link>
+      <description>USHJA Zone 4 Hunt &amp; Go Team Challenge at Harvest Time. Dates: Nov 4 - Nov 8, 2026. Location: Germantown, TN. Source: https://www.ushja.org/zones-affiliates/zone-4/competition-new</description>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
+      <category>Zone 4</category>
+      <guid isPermaLink="false">zone-4-harvest-time-2026</guid>
+      <attheingate:zone>4</attheingate:zone>
+      <attheingate:startDate>2026-11-04</attheingate:startDate>
+      <attheingate:endDate>2026-11-08</attheingate:endDate>
+      <attheingate:location>Germantown, TN</attheingate:location>
+      <attheingate:program>Zone 4 Hunt &amp; Go Team Challenge</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-4/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 5: WEC Midwest Indoors I</title>
+      <link>https://attheingate.com/shows/zone5/wec-midwest-indoors-i-2026</link>
+      <description>USHJA Zone 5 Horsemanship Class at WEC Midwest Indoors I. Dates: Nov 4 - Nov 8, 2026. Location: Wilmington, OH. Source: https://www.ushja.org/zones-affiliates/zone-5/competition</description>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
+      <category>Zone 5</category>
+      <guid isPermaLink="false">zone-5-wec-midwest-indoors-i-2026</guid>
+      <attheingate:zone>5</attheingate:zone>
+      <attheingate:startDate>2026-11-04</attheingate:startDate>
+      <attheingate:endDate>2026-11-08</attheingate:endDate>
+      <attheingate:location>Wilmington, OH</attheingate:location>
+      <attheingate:program>Zone 5 Horsemanship Class</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-5/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 7: Southwest Autumn Classic</title>
+      <link>https://attheingate.com/shows/zone7/southwest-autumn-classic-2026</link>
+      <description>USHJA Zone 7 HOTY hunter, jumper, equitation, and hunter breeding championship at Southwest Autumn Classic. Dates: Nov 4 - Nov 9, 2026. Location: Katy, TX. Source: https://www.ushja.org/zones-affiliates/zone-7/competition-new</description>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
+      <category>Zone 7</category>
+      <guid isPermaLink="false">zone-7-southwest-autumn-classic-2026</guid>
+      <attheingate:zone>7</attheingate:zone>
+      <attheingate:startDate>2026-11-04</attheingate:startDate>
+      <attheingate:endDate>2026-11-09</attheingate:endDate>
+      <attheingate:location>Katy, TX</attheingate:location>
+      <attheingate:program>Zone 7 Horse of the Year Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-7/competition-new</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 8: Tucson Fall Festival</title>
+      <link>https://attheingate.com/shows/zone8/tucson-fall-festival-2026</link>
+      <description>USHJA Zone 8 HOTY hunter, jumper, and equitation championship at Tucson Fall Festival. Dates: Nov 4 - Nov 8, 2026. Location: Tucson, AZ. Source: https://www.ushja.org/zones-affiliates/zone-8/competition</description>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
+      <category>Zone 8</category>
+      <guid isPermaLink="false">zone-8-tucson-fall-festival-2026</guid>
+      <attheingate:zone>8</attheingate:zone>
+      <attheingate:startDate>2026-11-04</attheingate:startDate>
+      <attheingate:endDate>2026-11-08</attheingate:endDate>
+      <attheingate:location>Tucson, AZ</attheingate:location>
+      <attheingate:program>Zone 8 Horse of the Year Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-8/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 10: National Sunshine Series II</title>
+      <link>https://attheingate.com/shows/zone10/national-sunshine-series-ii-2026</link>
+      <description>USHJA Zone 10 HOTY hunter and jumper championship plus Hunt &amp; Go Team Challenge at National Sunshine Series II. Dates: Nov 4 - Nov 8, 2026. Location: Thermal, CA. Source: https://www.ushja.org/zones-affiliates/zone-10/competition</description>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
+      <category>Zone 10</category>
+      <guid isPermaLink="false">zone-10-national-sunshine-series-ii-2026</guid>
+      <attheingate:zone>10</attheingate:zone>
+      <attheingate:startDate>2026-11-04</attheingate:startDate>
+      <attheingate:endDate>2026-11-08</attheingate:endDate>
+      <attheingate:location>Thermal, CA</attheingate:location>
+      <attheingate:program>Zone 10 Horse of the Year Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-10/competition</attheingate:source>
+    </item>
+
+    <item>
+      <title>Zone 4: SFHJA Charity Horse Show</title>
+      <link>https://attheingate.com/shows/zone4/sfhja-charity-horse-show-2026</link>
+      <description>USHJA Zone 4 HOTY hunter, jumper, and hunter breeding championship at SFHJA Charity Horse Show. Dates: Nov 18 - Nov 22, 2026. Location: Wellington, FL. Source: https://www.ushja.org/zones-affiliates/zone-4/competition-new</description>
+      <pubDate>Wed, 18 Nov 2026 12:00:00 GMT</pubDate>
+      <category>Zone 4</category>
+      <guid isPermaLink="false">zone-4-sfhja-charity-horse-show-2026</guid>
+      <attheingate:zone>4</attheingate:zone>
+      <attheingate:startDate>2026-11-18</attheingate:startDate>
+      <attheingate:endDate>2026-11-22</attheingate:endDate>
+      <attheingate:location>Wellington, FL</attheingate:location>
+      <attheingate:program>Zone 4 Horse of the Year Championship</attheingate:program>
+      <attheingate:status>verified-from-ushja</attheingate:status>
+      <attheingate:source>https://www.ushja.org/zones-affiliates/zone-4/competition-new</attheingate:source>
+    </item>
+  </channel>
+</rss>
