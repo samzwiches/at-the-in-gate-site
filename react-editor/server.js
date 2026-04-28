@@ -46,8 +46,15 @@ function safeOutputName(value) {
   return `${stem}.html`;
 }
 
-function safePath(urlPath) {
-  const cleanPath = decodeURIComponent((urlPath || "/").split("?")[0]);
+function decodeUrlPath(urlPath) {
+  try {
+    return decodeURIComponent((urlPath || "/").split("?")[0]);
+  } catch (error) {
+    return null;
+  }
+}
+
+function safePath(cleanPath) {
   if (cleanPath === "/" || cleanPath === "/index.html") {
     return path.join(ROOT, "index.html");
   }
@@ -61,7 +68,16 @@ function safePath(urlPath) {
 }
 
 const server = http.createServer((req, res) => {
-  const cleanUrl = decodeURIComponent((req.url || "/").split("?")[0]);
+  const cleanUrl = decodeUrlPath(req.url);
+  if (cleanUrl === null) {
+    send(
+      res,
+      400,
+      JSON.stringify({ ok: false, error: "Invalid URL encoding" }),
+      "application/json; charset=utf-8"
+    );
+    return;
+  }
 
   if (req.method === "POST" && WRITE_TARGETS[cleanUrl]) {
     let body = "";
@@ -123,7 +139,7 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  const requestedPath = safePath(req.url);
+  const requestedPath = safePath(cleanUrl);
 
   fs.stat(requestedPath, (statError, stats) => {
     if (statError) {
