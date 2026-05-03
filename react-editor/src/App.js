@@ -1,5 +1,5 @@
 (function () {
-  const { useMemo, useState } = React;
+  const { useEffect, useMemo, useState } = React;
   const { h, createSection, deepClone, getPage, sanitizeImageSrc, sanitizeSiteImages, storageKey } = window.AtigEditor.utils;
   const { Button, LinkButton } = window.AtigEditor.components.ui;
   const { PreviewSection } = window.AtigEditor.components.previews;
@@ -11,6 +11,7 @@
     const [selectedSectionId, setSelectedSectionId] = useState("hero");
     const [status, setStatus] = useState("Local editor ready. Click a preview section to edit it.");
     const [jsonOutput, setJsonOutput] = useState("");
+    const [assetLibrary, setAssetLibrary] = useState(window.AtigEditor.assetLibrary || []);
 
     const activePage = useMemo(() => getPage(site, activePageId) || site.pages[0], [site, activePageId]);
     const selectedSection = useMemo(
@@ -18,6 +19,32 @@
       [activePage, selectedSectionId]
     );
     const selectedIndex = activePage?.sections.findIndex((section) => section.id === selectedSectionId) ?? -1;
+
+    useEffect(() => {
+      let cancelled = false;
+
+      async function loadAssets() {
+        try {
+          const response = await fetch("/api/assets", { cache: "no-store" });
+          if (!response.ok) throw new Error("Asset endpoint unavailable");
+          const payload = await response.json();
+          if (!cancelled && Array.isArray(payload.assets)) {
+            setAssetLibrary(payload.assets);
+            window.AtigEditor.assetLibrary = payload.assets;
+          }
+        } catch (error) {
+          console.warn(error);
+          if (!cancelled) {
+            setStatus("Showing the built-in picture list. Restart the local server if new assets are missing.");
+          }
+        }
+      }
+
+      loadAssets();
+      return () => {
+        cancelled = true;
+      };
+    }, []);
 
     function updateSite(updater) {
       setSite((current) => {
@@ -330,6 +357,7 @@
           h("p", { className: "editor-status" }, status),
           h(SectionEditor, {
             section: selectedSection,
+            assetLibrary,
             updateSection: updateSelectedSection,
             moveSection,
             removeSection,
