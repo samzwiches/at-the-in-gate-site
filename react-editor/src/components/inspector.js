@@ -1,8 +1,19 @@
 (function () {
+  const { useMemo, useState } = React;
   const { h, createCardItem, fileToDataUrl, sanitizeImageSrc } = window.AtigEditor.utils;
-  const { Button, Field, Input, Select, Textarea } = window.AtigEditor.components.ui;
+  const { Button, Field, Input, Textarea } = window.AtigEditor.components.ui;
 
-  function ImageInputField({ label, value, onChange }) {
+  function ImageInputField({ label, value, onChange, assetLibrary = [] }) {
+    const [search, setSearch] = useState("");
+
+    const filteredAssets = useMemo(() => {
+      const query = search.trim().toLowerCase();
+      if (!query) return assetLibrary;
+      return assetLibrary.filter((asset) =>
+        `${asset.label || ""} ${asset.path || ""}`.toLowerCase().includes(query)
+      );
+    }, [assetLibrary, search]);
+
     async function handleFile(event) {
       const file = event.target.files?.[0];
       if (!file) return;
@@ -26,44 +37,68 @@
       Field,
       {
         label,
-        hint: "Replace the picture by picking one from the site library, pasting a path, or uploading a new one. The preview updates right away."
+        hint: "Pick from the project assets folder. The preview updates right away."
       },
       h(
         "div",
         { className: "image-input-group" },
         value ? h("img", { className: "image-input-preview", src: value, alt: "" }) : null,
+        h(
+          "div",
+          { className: "asset-picker-header" },
+          h("div", null, h("span", { className: "field-mini-label" }, "Project pictures"), h("strong", null, `${assetLibrary.length} assets`)),
+          h(Input, {
+            className: "asset-search",
+            value: search,
+            onChange: (event) => setSearch(event.target.value),
+            placeholder: "Search pictures"
+          })
+        ),
         h("div", { className: "image-input-stack" },
-          h("span", { className: "field-mini-label" }, "Choose a site picture"),
-          h(Select, { value: "", onChange: (event) => event.target.value && onChange(sanitizeImageSrc(event.target.value)) },
-            h("option", { value: "" }, "Use existing site picture..."),
-            (window.AtigEditor.assetLibrary || []).map((asset) =>
-              h("option", { key: asset.path, value: asset.path }, asset.label)
+          h(
+            "div",
+            { className: "asset-picker-grid" },
+            filteredAssets.length
+              ? filteredAssets.map((asset) =>
+              h(
+                "button",
+                {
+                  key: asset.path,
+                  type: "button",
+                  className: asset.path === value ? "asset-picker-button is-active" : "asset-picker-button",
+                  onClick: () => onChange(sanitizeImageSrc(asset.path))
+                },
+                h("img", { src: asset.path, alt: "" }),
+                h("span", null, asset.label)
+              )
             )
+              : h("p", { className: "asset-picker-empty" }, "No pictures match that search.")
           )
         ),
-        h("div", { className: "image-input-stack" },
-          h("span", { className: "field-mini-label" }, "Paste a picture path or web link"),
-          h(Input, {
-            value: value || "",
-            onChange: (event) => onChange(sanitizeImageSrc(event.target.value)),
-            placeholder: "../assets/your-picture.jpg or https://..."
-          })
-        ),
-        h("div", { className: "image-input-stack" },
-          h("span", { className: "field-mini-label" }, "Upload a replacement picture"),
-          h("input", {
-            className: "field-control file-control",
-            type: "file",
-            accept: "image/*",
-            onChange: handleFile
-          })
-        ),
         h("div", { className: "image-input-actions" },
+          h("label", { className: "editor-button editor-button-plain upload-button" },
+            "Upload Picture",
+            h("input", {
+              type: "file",
+              accept: "image/*",
+              onChange: handleFile
+            })
+          ),
           h(Button, {
             type: "button",
             onClick: () => onChange(""),
             disabled: !value
           }, "Clear Picture")
+        ),
+        h(
+          "details",
+          { className: "advanced-image-tools" },
+          h("summary", null, "Advanced path"),
+          h(Input, {
+            value: value || "",
+            onChange: (event) => onChange(sanitizeImageSrc(event.target.value)),
+            placeholder: "../assets/your-picture.jpg or https://..."
+          })
         )
       )
     );
@@ -71,6 +106,7 @@
 
   function SectionEditor({
     section,
+    assetLibrary,
     updateSection,
     moveSection,
     removeSection,
@@ -122,7 +158,7 @@
             h(Field, { label: "Subheading" }, h(Textarea, { value: section.subheading || "", onChange: (event) => updateSection({ subheading: event.target.value }) })),
             h(Field, { label: "Button label" }, h(Input, { value: section.buttonText || "", onChange: (event) => updateSection({ buttonText: event.target.value }) })),
             h(Field, { label: "Button link" }, h(Input, { value: section.buttonLink || "", onChange: (event) => updateSection({ buttonLink: event.target.value }) })),
-            h(ImageInputField, { label: "Image", value: section.imageUrl || "", onChange: (imageUrl) => updateSection({ imageUrl }) })
+            h(ImageInputField, { label: "Image", value: section.imageUrl || "", assetLibrary, onChange: (imageUrl) => updateSection({ imageUrl }) })
           )
         : null,
       section.type === "text"
@@ -151,7 +187,7 @@
                     h("strong", null, `Card ${index + 1}`),
                     h(Button, { type: "button", variant: "danger", onClick: () => removeCard(item.id), disabled: section.items.length <= 1 }, "Remove")
                   ),
-                  h(ImageInputField, { label: "Image", value: item.imageUrl || "", onChange: (imageUrl) => updateCardItem(item.id, { imageUrl }) }),
+                  h(ImageInputField, { label: "Image", value: item.imageUrl || "", assetLibrary, onChange: (imageUrl) => updateCardItem(item.id, { imageUrl }) }),
                   h(Field, { label: "Title" }, h(Input, { value: item.title || "", onChange: (event) => updateCardItem(item.id, { title: event.target.value }) })),
                   h(Field, { label: "Text" }, h(Textarea, { value: item.text || "", onChange: (event) => updateCardItem(item.id, { text: event.target.value }) })),
                   h(Field, { label: "Button label" }, h(Input, { value: item.buttonLabel || "", onChange: (event) => updateCardItem(item.id, { buttonLabel: event.target.value }) })),
