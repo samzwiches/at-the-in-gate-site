@@ -1,6 +1,6 @@
 (function () {
   const { h, createCardItem, fileToDataUrl, sanitizeImageSrc } = window.AtigEditor.utils;
-  const { Button, Field, Input, Select, Textarea } = window.AtigEditor.components.ui;
+  const { Button, Field, Input, Textarea } = window.AtigEditor.components.ui;
 
   function ImageInputField({ label, value, onChange }) {
     async function handleFile(event) {
@@ -33,11 +33,22 @@
         { className: "image-input-group" },
         value ? h("img", { className: "image-input-preview", src: value, alt: "" }) : null,
         h("div", { className: "image-input-stack" },
-          h("span", { className: "field-mini-label" }, "Choose a site picture"),
-          h(Select, { value: "", onChange: (event) => event.target.value && onChange(sanitizeImageSrc(event.target.value)) },
-            h("option", { value: "" }, "Use existing site picture..."),
+          h("span", { className: "field-mini-label" }, "Pick a site picture"),
+          h(
+            "div",
+            { className: "asset-picker-grid" },
             (window.AtigEditor.assetLibrary || []).map((asset) =>
-              h("option", { key: asset.path, value: asset.path }, asset.label)
+              h(
+                "button",
+                {
+                  key: asset.path,
+                  type: "button",
+                  className: asset.path === value ? "asset-picker-button is-active" : "asset-picker-button",
+                  onClick: () => onChange(sanitizeImageSrc(asset.path))
+                },
+                h("img", { src: asset.path, alt: "" }),
+                h("span", null, asset.label)
+              )
             )
           )
         ),

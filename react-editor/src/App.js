@@ -1,7 +1,7 @@
 (function () {
   const { useMemo, useState } = React;
   const { h, createSection, deepClone, getPage, sanitizeImageSrc, sanitizeSiteImages, storageKey } = window.AtigEditor.utils;
-  const { Button, LinkButton, Select } = window.AtigEditor.components.ui;
+  const { Button, LinkButton } = window.AtigEditor.components.ui;
   const { PreviewSection } = window.AtigEditor.components.previews;
   const { SectionEditor } = window.AtigEditor.components.inspector;
 
@@ -9,7 +9,6 @@
     const [site, setSite] = useState(window.AtigEditor.initialSite);
     const [activePageId, setActivePageId] = useState("home");
     const [selectedSectionId, setSelectedSectionId] = useState("hero");
-    const [sectionTypeToAdd, setSectionTypeToAdd] = useState("hero");
     const [status, setStatus] = useState("Local editor ready. Click a preview section to edit it.");
     const [jsonOutput, setJsonOutput] = useState("");
 
@@ -96,8 +95,8 @@
       setStatus("Section deleted.");
     }
 
-    function addSection() {
-      const newSection = createSection(sectionTypeToAdd);
+    function addSection(sectionType) {
+      const newSection = createSection(sectionType);
 
       updateSite((draft) => {
         const page = getPage(draft, activePageId);
@@ -204,15 +203,14 @@
         h(
           "div",
           { className: "topbar-actions" },
-          h(Select, { value: activePageId, onChange: (event) => selectPage(event.target.value) }, site.pages.map((page) => h("option", { key: page.id, value: page.id }, page.name))),
-          h(Select, { value: sectionTypeToAdd, onChange: (event) => setSectionTypeToAdd(event.target.value) }, h("option", { value: "hero" }, "Hero"), h("option", { value: "text" }, "Text"), h("option", { value: "cards" }, "Cards")),
-          h(Button, { type: "button", variant: "primary", onClick: addSection }, "Add Section"),
-          h(Button, { type: "button", onClick: saveToBrowser }, "Save"),
-          h(Button, { type: "button", variant: "primary", onClick: publishToFile }, "Publish File"),
-          h(Button, { type: "button", onClick: loadFromBrowser }, "Load"),
+          h(Button, { type: "button", onClick: saveToBrowser }, "Save Draft"),
+          h(Button, { type: "button", variant: "primary", onClick: publishToFile }, "Publish Site File"),
+          h(Button, { type: "button", onClick: loadFromBrowser }, "Load Draft"),
           h(Button, { type: "button", onClick: exportJson }, "Export JSON"),
-          h(Button, { type: "button", onClick: loadDemoContent }, "Reset Demo"),
-          h(LinkButton, { href: activePage?.href || "../index.html" }, "Open Public Page")
+          h(LinkButton, { href: "/react-editor/?mode=project" }, "Edit HTML Pages"),
+          h(LinkButton, { href: "/react-editor/?mode=anything" }, "Build HTML Page"),
+          h(LinkButton, { href: activePage?.href || "../index.html" }, "Open Public Page"),
+          h(Button, { type: "button", onClick: loadDemoContent }, "Reset Demo")
         )
       ),
       h(
@@ -258,6 +256,39 @@
               h("small", null, page.href ? page.href.replace("../", "/") : "Page content")
             )
           )
+        )
+      ),
+      h(
+        "section",
+        { className: "owner-action-strip", "aria-label": "Editor actions" },
+        h(
+          "div",
+          null,
+          h("p", null, "Save and publish"),
+          h("h2", null, "Use these. Ignore the weird stuff."),
+          h("span", null, "Draft saves stay in this browser. Publish Site File writes editor-site.json for the real site.")
+        ),
+        h(
+          "div",
+          { className: "owner-action-buttons" },
+          h(Button, { type: "button", onClick: saveToBrowser }, "Save Draft"),
+          h(Button, { type: "button", variant: "primary", onClick: publishToFile }, "Publish Site File"),
+          h(Button, { type: "button", onClick: loadFromBrowser }, "Load Draft"),
+          h(Button, { type: "button", onClick: exportJson }, "Download JSON"),
+          h(LinkButton, { href: "/react-editor/?mode=project" }, "Save HTML Pages"),
+          h(LinkButton, { href: "/react-editor/?mode=anything" }, "Publish New HTML")
+        )
+      ),
+      h(
+        "section",
+        { className: "add-section-panel", "aria-label": "Add a section" },
+        h("div", null, h("p", null, "Add section"), h("h2", null, "Pick the block you want.")),
+        h(
+          "div",
+          { className: "quick-add-buttons" },
+          h(Button, { type: "button", onClick: () => addSection("hero") }, "Add Hero"),
+          h(Button, { type: "button", onClick: () => addSection("text") }, "Add Text"),
+          h(Button, { type: "button", onClick: () => addSection("cards") }, "Add Cards")
         )
       ),
       h(
